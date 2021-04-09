@@ -1,0 +1,40 @@
+<div class="row text-center body">
+   <div class="col-lg-4 mx-auto my-auto">
+      <div class="display-6 mb-4">Giriş Yap</div>
+
+      <div class="card rounded-0 shadow">
+         
+         <div class="card-body">
+
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+               <div class="form-floating mb-3">
+                  <input type="email" class="form-control" [readonly]="setCurrentCustomerEmail()" id="email" placeholder="email" formControlName="email">
+                  <label for="email">E-Posta Adresiniz</label>
+               </div>
+
+               <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="password" placeholder="password"
+                         formControlName="password">
+                  <label for="password">Şifreniz</label>
+               </div>
+
+               <div class="row mb-4">
+                     <div class="d-grid ">
+                        <button class="btn btn-primary rounded-0">
+                           Giriş Yap
+                        </button>          
+                  </div>
+               </div>
+            </form>
+
+            <div class="d-block text-start">
+               Hesabınız yok mu? 
+               <span class="register" routerLink="/auth/register">
+                  Bir tane oluştur!
+               </span>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
